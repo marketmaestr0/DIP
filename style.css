@@ -136,10 +136,15 @@
         line-height: 1.6;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        word-break: break-word;
-        overflow-wrap: anywhere;
         padding-top: var(--nav-h);
     }
+
+    html, body {
+        white-space: normal;      /* allow wrapping */
+        word-break: normal;       /* don't break inside words */
+        overflow-wrap: normal;    /* only break at normal break points */
+        hyphens: none;            /* no auto hyphenation */
+      }
 
     img {
         max-width: 100%;
@@ -232,6 +237,7 @@
     h4 {
         font-family: var(--font-h);
         line-height: 1.2;
+        text-wrap: balance;
     }
 
     h1 {
@@ -276,6 +282,21 @@
         color: var(--brand-blue);
     }
 
+
+/* Fallback: your current fluid steps (viewport-based) */
+h1 { font-size: var(--step-5); }
+h2 { font-size: var(--step-4); }
+h3 { font-size: var(--step-3); }
+h4 { font-size: var(--step-2); }
+
+/* Prefer container-based sizing when supported */
+@supports (font-size: 1cqw) {
+  /* Use your step tokens as the max; min = 50% of that */
+  h1 { font-size: clamp(calc(var(--step-5) * .5), 8cqw,  var(--step-5)); }
+  h2 { font-size: clamp(calc(var(--step-4) * .5), 6cqw,  var(--step-4)); }
+  h3 { font-size: clamp(calc(var(--step-3) * .5), 5cqw,  var(--step-3)); }
+  h4 { font-size: clamp(calc(var(--step-2) * .5), 4cqw,  var(--step-2)); }
+}
 
     /* =========================
    Navbar
@@ -649,6 +670,14 @@
         cursor: pointer;
         /* make sure shine doesn’t bleed outside */
     }
+
+    @media (max-width: 767px) {
+        .hero .btn {
+          display: block;          /* was inline-flex */
+          width: max-content;      /* shrink to its content */
+          margin-inline: auto;     /* centers inside its .col-6 */
+        }
+      }
 
     .btn:hover {
         transform: scale(1.02) translateY(-2px);
@@ -1088,6 +1117,22 @@
         font-size: var(--step-1);
         color: var(--text-dim);
     }
+
+    @media (max-width: 600px) {
+        .buy-section {
+          max-height: none;       /* remove the clamp */
+          /* optional: you can also relax this, or drop it too */
+          min-height: 50vh;
+        }
+      
+        .buy-content {
+          grid-template-rows: auto auto auto;  /* avoid 1fr weirdness on iOS Safari */
+          row-gap: var(--space-5);             /* space between CA and dex-links */
+        }
+      
+        /* extra cushion if you want even more space */
+        .dex-links { margin-top: var(--space-5); }
+      }
 
 
     /* =========================
