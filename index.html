@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$DIP</title>
+  <meta name="Buy the $DIP. $DIP official website."
+    content="A clean, modern starter template that demonstrates grid layout, type hierarchy, spacing, and accessible components." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body id="top">
+
+  <!--========== Nav Bar =============
+  ====================================
+  =================================-->
+
+  <nav class="navbar">
+
+    <!-- Left: Logo -->
+    <div class="navlogo">
+      <a class="site-brand" href="#top" aria-label="$DIP home">
+        <img src="images/header-logo.webp" alt="" aria-hidden="true">
+        <span class="site-name">$DIP</span>
+      </a>
+    </div>
+
+    <!-- Center: Main Links -->
+    <ul class="nav-links" id="primary-navigation">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Tokenomics">Tokenomics</a></li>
+      <!-- <li><a href="#HowToBuy">How To Buy</a></li> -->
+      <li><a href="#NFTs">NFTs</a></li>
+      <li><a href="#Radio$DIP">Radio $DIP</a></li>
+      <li><a class="nav-btn" href="#cta">BUY NOW</a></li>
+    </ul>
+
+    <!-- Right: Icons -->
+    <div class="nav-socials">
+      <a href="https://t.me/wildwestlaunchpad" target="_blank" rel="noopener">
+        <img src="./images/icons/icons8-telegram-app-240_WHITE.png" alt="Telegram" class="nav-socials-icons">
+      </a>
+      <a href="https://x.com/WILDWESTLP?t=wmcDfvCKnkAaLCtJbmAxgA" target="_blank" rel="noopener">
+        <img src="./images/icons/icons8-twitterx-240_WHITE.png" alt="Twitter/X" class="nav-socials-icons">
+      </a>
+      <a href="https://dexscreener.com/base/0x8129609e5303910464fce3022a809fa44455fe9a" target="_blank" rel="noopener">
+        <img src="./images/icons/661375b92a7e161501f4b5e5_dexscreener.322a5a2d_WHITE.png" alt="DEXScreener"
+          class="nav-socials-icons">
+      </a>
+
+      <!-- Mobile menu toggle -->
+      <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Open menu">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!--=========== HERO ===============
+    ====================================
+    =================================-->
+
+    <section class="hero">
+      <div class="container grid grid-12 hero__grid">
+        <div class="col-6">
+          <h3>BUY</h3>
+          <h3>THE</h3>
+          <h1>$DIP</h1>
+          <!-- Simple play/pause button -->
+          <button class="audio-toggle" type="button" aria-controls="dip-audio" aria-label="Play" aria-pressed="false">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path id="iconPath" fill="currentColor" d="M1,2 L20,12 L1,22 L1,22 Z   M12,2 L12,2 L12,2 L12,2 Z">
+                <!-- to PAUSE (two bars: [1..8] and [12..19], y 2..22) -->
+                <animate id="toPause" attributeName="d" dur="200ms" fill="freeze"
+                  to="M1,2 L8,2 L8,22 L1,22 Z   M12,2 L19,2 L19,22 L12,22 Z" />
+                <!-- back to PLAY (triangle + dummy subpath) -->
+                <animate id="toPlay" attributeName="d" dur="200ms" fill="freeze"
+                  to="M1,2 L20,12 L1,22 L1,22 Z   M12,2 L12,2 L12,2 L12,2 Z" />
+              </path>
+            </svg>
+          </button>
+
+          <!-- Your audio element (can be anywhere on the page) -->
+          <audio id="dip-audio" preload="metadata">
+            <source src="./audio/dippys-dip-party.mp3" type="audio/mpeg">
+            <source src="./audio/dippys-dip-party.ogg" type="audio/ogg">
+          </audio>
+
+          <div>
+            <a class="btn" href="#cta">BUY NOW</a>
+          </div>
+        </div>
+        <div class="col-6" style="justify-content: centre;">
+          <img src="images/big-logo-transparent-detailed.webp" alt="big-logo-transparent-detailed">
+
+        </div>
+      </div>
+      <div class="hero-socials">
+        <a href="https://t.me/wildwestlaunchpad" target="_blank" rel="noopener">
+          <img src="./images/icons/icons8-telegram-app-240_WHITE.png" alt="Telegram" class="hero-socials-icons">
+        </a>
+        <a href="https://x.com/WILDWESTLP?t=wmcDfvCKnkAaLCtJbmAxgA" target="_blank" rel="noopener">
+          <img src="./images/icons/icons8-twitterx-240_WHITE.png" alt="Twitter/X" class="hero-socials-icons">
+        </a>
+        <a href="https://dexscreener.com/base/0x8129609e5303910464fce3022a809fa44455fe9a" target="_blank"
+          rel="noopener">
+          <img src="./images/icons/661375b92a7e161501f4b5e5_dexscreener.322a5a2d_WHITE.png" alt="DEXScreener"
+            class="hero-socials-icons">
+        </a>
+      </div>
+    </section>
+
+
+
+
+    <!--======== BUY SECTION ===========
+    ====================================
+    =================================-->
+
+    <section id="About" class="buy-section">
+      <div class="container">
+        <div class="parallax-bg" aria-hidden="true"></div>
+        <div class="buy-content">
+          <h2 class="buy-header">BUY THE $DIP NOW</h2>
+          <div class="ca-section">
+            <p class="ca-heading">CA:</p>
+            <!-- <a class="ca-btn" data-copy="0x0000000000000000000000000000000000">
+            0x0000000000000000000000000000000000
+          </a> -->
+            <a class="ca-btn">
+              Coming soon...
+            </a>
+
+            <!-- Popup -->
+            <!--
+          <span class="copy-popup">Copied!</span>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const caBtn = document.querySelector(".ca-btn");
+              const popup = document.querySelector(".copy-popup");
+
+              caBtn.addEventListener("click", async (e) => {
+                e.preventDefault();
+                const text = caBtn.dataset.copy;
+
+                try {
+                  await navigator.clipboard.writeText(text);
+
+                  // Show popup
+                  popup.classList.add("show");
+
+                  // Hide after 1.5s
+                  setTimeout(() => {
+                    popup.classList.remove("show");
+                  }, 1500);
+                } catch (err) {
+                  console.error("Failed to copy: ", err);
+                }
+              });
+            });
+          </script>
+        -->
+
+          </div>
+
+          <div class="dex-links">
+            <a href="https://t.me/wildwestlaunchpad" target="_blank" rel="noopener" id="dex-screener-big">
+              <img src="./images/icons/dexscreener_WHITE_clean.png" alt="DEX Screener" class="dex-link-icon">
+            </a>
+            <a href="https://x.com/WILDWESTLP?t=wmcDfvCKnkAaLCtJbmAxgA" target="_blank" rel="noopener">
+              <img src="./images/icons/Brand_DEXTools_Isotype_Shadow.png" alt="DEXTools" class="dex-link-icon">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!--========== ABOUT ===============
+    ====================================
+    =================================-->
+
+    <section id="About" class="section-blue">
+      <div class="container">
+        <h2>ABOUT</h2>
+        <div class="mission-para">
+          <h4>MISSION</h4>
+          <div class="white-text-body">
+            <p>Dippy is here to guide everyone through the ups and downs of trading memecoins.
+              Through the best of times, but - more importantly - through the worst. Dippy is
+              a reminder to all of us to, when the market sinks, buy that tasty $DIP!</p>
+          </div>
+        </div>
+        <div class="funding-para">
+          <h4>FUNDING & MARKETING</h4>
+          <div class="white-text-body">
+            <p>The token is entirely self-funded and, as a result, profits will be sold
+              responsibly at key, landmark market caps and then used to fund the next steps
+              for marketing. Marketing steps will include (but not limited to):</p>
+            <ul>
+              <li>Airdrops</li>
+              <li>Buy competitions</li>
+              <li>DexScreener Ads</li>
+              <li>DexScreener Boosts</li>
+              <li>Collaborations with KOLs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tagline">
+          <p>"STAY COOL... BUY THE $DIP!"</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!--======== TOKENOMICS ============
+    ====================================
+    =================================-->
+
+    <section id="Tokenomics" class="section-yellow">
+      <div class="container">
+        <h2 class="blue-header">TOKENOMICS</h2>
+        <div class="tokenomics-para">
+          <p>$Dip will be launched on the new launchpad, WILD WEST, so the contract is as safe as safe can be.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!--========== FOOTER ==============
+    ====================================
+    =================================-->
+
+    <footer class="footer-container">
+      <div class="footer-section">
+        <strong>BUY THE $DIP</strong>
+        <div class="footer-socials">
+          <a href="https://t.me/wildwestlaunchpad" target="_blank" rel="noopener">
+            <img src="./images/icons/icons8-telegram-app-240_WHITE.png" alt="Telegram" class="footer-socials-icons">
+          </a>
+          <a href="https://x.com/WILDWESTLP?t=wmcDfvCKnkAaLCtJbmAxgA" target="_blank" rel="noopener">
+            <img src="./images/icons/icons8-twitterx-240_WHITE.png" alt="Twitter/X" class="footer-socials-icons">
+          </a>
+          <a href="https://dexscreener.com/base/0x8129609e5303910464fce3022a809fa44455fe9a" target="_blank"
+            rel="noopener">
+            <img src="./images/icons/661375b92a7e161501f4b5e5_dexscreener.322a5a2d_WHITE.png" alt="DEXScreener"
+              class="footer-socials-icons">
+          </a>
+        </div>
+        <div class="footer-ca-section">
+          <p class="footer-ca-header">Contract Address:</p>
+          <!-- Make it focusable/clickable and add the value to data-copy -->
+          <span class="footer-ca" data-copy="0x0000000000000000000000000000000000000" role="button" tabindex="0"
+            aria-label="Copy contract address">
+            0x0000000000000000000000000000000000000
+          </span>
+
+          <!-- optional little toast -->
+          <span class="copy-popup" aria-hidden="true">Copied!</span>
+        </div>
+        <small>© <span id="year"></span> $DIP-Token Inc. All rights reserved.</small>
+
+      </div>
+
+      <script>
+        // tiny enhancement: current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
+
+    </footer>
+
+    <!--AUDIO PLAYER-->
+    <script>
+      (() => {
+        const btn = document.querySelector('.audio-toggle');
+        const audio = document.getElementById('dip-audio');
+        const toPause = document.getElementById('toPause');
+        const toPlay = document.getElementById('toPlay');
+        const path = document.getElementById('iconPath');
+
+        function sync() {
+          const playing = !audio.paused;
+          btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+          btn.setAttribute('aria-label', playing ? 'Pause' : 'Play');
+        }
+
+        btn.addEventListener('click', async () => {
+          const willPlay = audio.paused;
+          try {
+            (willPlay ? toPause : toPlay).beginElement();
+            if (willPlay) { await audio.play(); } else { audio.pause(); }
+          } catch (e) {
+            // Fallback: instantly swap the path if animation isn’t supported
+            const anim = willPlay ? toPause : toPlay;
+            path.setAttribute('d', anim.getAttribute('to'));
+            if (willPlay) audio.play(); else audio.pause();
+          } finally {
+            sync();
+          }
+        });
+
+        audio.addEventListener('ended', () => { toPlay.beginElement(); sync(); });
+        audio.addEventListener('play', sync);
+        audio.addEventListener('pause', sync);
+        sync();
+      })();
+    </script>
+
+
+
+    <script>
+      const bg = document.querySelector('.parallax-bg');
+      const strength = 0.25;
+
+      function parallax2() {
+        const rect = bg.parentElement.getBoundingClientRect();
+        if (rect.bottom >= 0 && rect.top <= innerHeight) {
+          const scrolled = (innerHeight / 2 - rect.top) * strength;
+          bg.style.setProperty('--shift', scrolled + 'px');
+        }
+      }
+
+      addEventListener('scroll', parallax2, { passive: true });
+      addEventListener('resize', parallax2);
+      parallax2();
+    </script>
+
+
+    <script>
+      (function () {
+        const toggle = document.querySelector('.nav-toggle');
+        const menu = document.getElementById('primary-navigation');
+
+        if (!toggle || !menu) return;
+
+        function setOpen(open) {
+          menu.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+          document.body.style.overflow = open ? 'hidden' : ''; // lock scroll when open
+        }
+
+        toggle.addEventListener('click', () => {
+          const open = !menu.classList.contains('open');
+          setOpen(open);
+        });
+
+        // Close when a link is clicked
+        menu.addEventListener('click', (e) => {
+          if (e.target.closest('a')) setOpen(false);
+        });
+
+        // Close on ESC
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') setOpen(false);
+        });
+
+        // Click outside to close
+        document.addEventListener('click', (e) => {
+          if (!menu.classList.contains('open')) return;
+          const clickedInside = e.target.closest('.nav-links, .nav-toggle');
+          if (!clickedInside) setOpen(false);
+        });
+      })();
+    </script>
+
+    <!-- CLICK TO COPY-->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("[data-copy]").forEach(el => {
+          const popup = el.nextElementSibling && el.nextElementSibling.classList?.contains("copy-popup")
+            ? el.nextElementSibling
+            : null;
+
+          async function copyIt(e) {
+            e?.preventDefault?.();
+            const text = (el.dataset.copy || el.textContent || "").trim();
+            try {
+              await navigator.clipboard.writeText(text);
+              if (popup) {
+                popup.classList.add("show");
+                setTimeout(() => popup.classList.remove("show"), 1200);
+              }
+              el.classList.add("copied");
+              setTimeout(() => el.classList.remove("copied"), 600);
+            } catch (err) {
+              console.error("Copy failed:", err);
+            }
+          }
+
+          el.addEventListener("click", copyIt);
+          el.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") { copyIt(e); }
+          });
+
+          // accessibility niceties if not already present
+          el.setAttribute("role", el.getAttribute("role") || "button");
+          if (!el.hasAttribute("tabindex")) el.setAttribute("tabindex", "0");
+          if (!el.hasAttribute("aria-label")) el.setAttribute("aria-label", "Copy to clipboard");
+        });
+      });
+    </script>
+
+
+    <!-- COMING SOON -->
+
+    <script>
+      (() => {
+        // Trigger links
+        const soonLinks = document.querySelectorAll('a[href="#NFTs"], a[href="#Radio$DIP"]');
+        if (!soonLinks.length) return;
+
+        // Build the toast once
+        const toast = document.createElement('div');
+        toast.className = 'soon-toast';
+        toast.innerHTML = `
+      <div class="soon-toast__panel" role="status" aria-live="polite">
+        COMING SOON!
+      </div>
+    `;
+        document.body.appendChild(toast);
+
+        let hideTimer;
+        const SHOW_MS = 2400;
+
+        function showToast() {
+          clearTimeout(hideTimer);
+          toast.classList.add('show');
+          hideTimer = setTimeout(hideToast, SHOW_MS);
+        }
+
+        function hideToast() {
+          toast.classList.remove('show');
+        }
+
+        // Click/tap on the links -> show toast (and stop the anchor jump)
+        soonLinks.forEach(a => {
+          a.addEventListener('click', e => {
+            e.preventDefault();
+            showToast();
+          });
+
+          // Keyboard support
+          a.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              showToast();
+            }
+          });
+        });
+
+        // Click/tap OUTSIDE the panel (on the dim backdrop) -> hide
+        toast.addEventListener('click', (e) => {
+          if (e.target === toast) hideToast();
+        });
+
+        // ESC to dismiss
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') hideToast();
+        });
+      })();
+    </script>
+
+
+
+</body>
+
+</html>
