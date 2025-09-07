@@ -5,16 +5,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>$DIP</title>
-  <meta name="Buy the $DIP. $DIP official website."
-    content="A clean, modern starter template that demonstrates grid layout, type hierarchy, spacing, and accessible components." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap"
-    rel="stylesheet">
+    rel="stylesheet">     
 
   <link rel="stylesheet" href="style.css">
 
@@ -26,13 +21,13 @@
   <!--========== Nav Bar =============
   ====================================
   =================================-->
-
-  <nav class="navbar">
+<header>
+  <nav class="navbar">    
 
     <!-- Left: Logo -->
     <div class="navlogo">
       <a class="site-brand" href="#top" aria-label="$DIP home">
-        <img src="images/header-logo.webp" alt="" aria-hidden="true">
+        <img src="images/header-logo.webp" alt="header-logo" aria-hidden="true">
         <span class="site-name">$DIP</span>
       </a>
     </div>
@@ -42,9 +37,9 @@
       <li><a href="#top">Home</a></li>
       <li><a href="#About">About</a></li>
       <li><a href="#Tokenomics">Tokenomics</a></li>
-      <!-- <li><a href="#HowToBuy">How To Buy</a></li> -->
+      <li><a href="#Staking">Staking</a></li>
       <li><a href="#NFTs">NFTs</a></li>
-      <li><a href="#Radio$DIP">Radio $DIP</a></li>
+      <li><a href="#RadioDIP">Radio $DIP</a></li>
       <li><a class="nav-btn" href="#cta">BUY NOW</a></li>
     </ul>
 
@@ -70,6 +65,7 @@
 
     </div>
   </nav>
+</header>
 
 
   <main>
@@ -108,7 +104,7 @@
             <a class="btn" href="#cta">BUY NOW</a>
           </div>
         </div>
-        <div class="col-6" style="justify-content: centre;">
+        <div class="col-6">
           <img src="images/big-logo-transparent-detailed.webp" alt="big-logo-transparent-detailed">
 
         </div>
@@ -135,7 +131,7 @@
     ====================================
     =================================-->
 
-    <section id="About" class="buy-section">
+    <section class="buy-section">
       <div class="container">
         <div class="parallax-bg" aria-hidden="true"></div>
         <div class="buy-content">
@@ -182,6 +178,8 @@
 
           </div>
 
+          <!--
+
           <div class="dex-links">
             <a href="https://t.me/wildwestlaunchpad" target="_blank" rel="noopener" id="dex-screener-big">
               <img src="./images/icons/dexscreener_WHITE_clean.png" alt="DEX Screener" class="dex-link-icon">
@@ -190,6 +188,7 @@
               <img src="./images/icons/Brand_DEXTools_Isotype_Shadow.png" alt="DEXTools" class="dex-link-icon">
             </a>
           </div>
+          -->
 
         </div>
       </div>
@@ -270,9 +269,9 @@
         <div class="footer-ca-section">
           <p class="footer-ca-header">Contract Address:</p>
           <!-- Make it focusable/clickable and add the value to data-copy -->
-          <span class="footer-ca" data-copy="0x0000000000000000000000000000000000000" role="button" tabindex="0"
+          <span class="footer-ca" data-copy="Coming Soon!" role="button" tabindex="0"
             aria-label="Copy contract address">
-            0x0000000000000000000000000000000000000
+            COMING SOON!
           </span>
 
           <!-- optional little toast -->
@@ -426,7 +425,7 @@
     <script>
       (() => {
         // Trigger links
-        const soonLinks = document.querySelectorAll('a[href="#NFTs"], a[href="#Radio$DIP"]');
+        const soonLinks = document.querySelectorAll('a[href="#NFTs"], a[href="#Staking"], a[href="#Radio$DIP"]');
         if (!soonLinks.length) return;
 
         // Build the toast once
@@ -440,7 +439,7 @@
         document.body.appendChild(toast);
 
         let hideTimer;
-        const SHOW_MS = 2400;
+        const SHOW_MS = 2500;
 
         function showToast() {
           clearTimeout(hideTimer);
